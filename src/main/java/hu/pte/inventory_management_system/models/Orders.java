@@ -8,7 +8,6 @@ import lombok.Setter;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotNull;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -24,12 +23,10 @@ public class Orders {
 
     @Column(nullable = false)
     @DateTimeFormat
-    @NotNull
     private LocalDateTime created;
 
     @Column(nullable = false)
     @DateTimeFormat
-    @NotNull
     private LocalDateTime expectedDelivery;
 
     @Column(nullable = false)
