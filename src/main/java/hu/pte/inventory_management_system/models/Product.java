@@ -35,7 +35,6 @@ public class Product {
     private Float price;
 
     @Column(nullable = false)
-    @NotBlank
     private String thumbnail;
 
     @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)

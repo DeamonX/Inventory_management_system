@@ -38,6 +38,7 @@ public class StorageService implements IStorageService {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST);
         }
 
+        
         StorageId storageId = new StorageId();
         storageId.setProductId(productId);
 

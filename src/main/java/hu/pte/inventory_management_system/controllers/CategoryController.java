@@ -9,7 +9,9 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 import java.util.List;
 
+
 @RestController
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RequestMapping("/api/category")
 public class CategoryController {
     private final CategoryService categoryService;
@@ -17,7 +19,7 @@ public class CategoryController {
     public CategoryController(CategoryService categoryService) {
         this.categoryService = categoryService;
     }
-
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PostMapping("/")
     public ResponseEntity<Category> addNewCategory(@RequestBody @Valid Category category){
         return new ResponseEntity<>(categoryService.addCategory(category), HttpStatus.CREATED);

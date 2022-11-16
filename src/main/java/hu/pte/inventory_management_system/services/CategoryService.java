@@ -24,6 +24,9 @@ public class CategoryService implements ICategoryService {
      */
     @Override
     public Category addCategory(Category category){
+        if(categoryRepository.findByName(category.getName()).isPresent()){
+            throw new ResponseStatusException(HttpStatus.CONFLICT);
+        }
         return categoryRepository.save(category);
     }
 

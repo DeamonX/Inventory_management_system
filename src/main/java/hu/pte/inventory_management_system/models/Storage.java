@@ -12,7 +12,6 @@ import javax.persistence.*;
 import javax.validation.constraints.Digits;
 import javax.validation.constraints.Min;
 import java.io.Serializable;
-import java.math.BigDecimal;
 
 @Entity
 @Getter
